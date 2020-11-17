@@ -18,10 +18,10 @@ db=client.mars_db
 def home():
 
     # Find one record of data from the mongo database
-    mars_results = db.mars_results.find()
+    mars_data = db.mars_data.find()
 
     # Return template and data
-    return render_template("index.html", mars_results=mars_results)
+    return render_template("index.html", mars_data=mars_data)
 
 
 # Route that will trigger the scrape function
